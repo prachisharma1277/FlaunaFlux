@@ -1,0 +1,24 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-img {
+  animation: zoomFade 20s ease-in-out infinite alternate;
+}
+@keyframes zoomFade {
+  from { transform: scale(1); opacity: 0.95; }
+  to { transform: scale(1.1); opacity: 1; }
+}
+
+.cta-btn:hover {
+  box-shadow: 0 0 15px #22c55e80;
+  transform: scale(1.05);
+}
+section:first-of-type {
+  padding-top: 6rem; /* adjust depending on navbar height */
+}
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
