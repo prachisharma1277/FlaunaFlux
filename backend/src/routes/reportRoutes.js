@@ -6,7 +6,7 @@ const { v2: cloudinary } = require('cloudinary');
 const passport = require('passport');
 const fetch = require('node-fetch');
 const router = express.Router();
-
+const API_URL=process.env.BACKEND_URL;
 // --- 1. Import your new mailer function ---
 const { sendAlertEmail } = require('../config/mail'); 
 
@@ -130,7 +130,7 @@ router.post(
         };
 
         // --- 4a. Trigger the alert endpoint ---
-        await axios.post('http://localhost:5000/api/alerts/trigger', {
+        await axios.post(`${API_URL}/api/alerts/trigger`, {
           reportType,
           species,
           notes,
@@ -174,5 +174,6 @@ router.post(
 router.get('/', async (req, res) => {
   // ... (logic for fetching reports) ...
 });
+
 
 module.exports = router;
