@@ -8,7 +8,7 @@ import Elephant from "../../assets/images/_Com3.png";
 import Tiger from "../../assets/images/VPop6.png";
 import Deer from '../../assets/images/Pop4.png';
 import Rhino from '../../assets/images/VPop7.png';
-import Buffalo from '../../assets/images/buffalo.png';
+import Buffalo from '../../assets/images/Buffalo.png';
 import Lion from '../../assets/images/Lion.png';
 import Hyena from '../../assets/images/Hyena.png';
 import Leopard from '../../assets/images/Leopard.png';
@@ -101,4 +101,5 @@ export default function SpeciesSpotlight({ selectedRegion }) {
       </div>
     </section>
   );
+
 }
