@@ -37,7 +37,7 @@ async function sendAlertEmail(alert) {
   try {
     const info = await transporter.sendMail({
       from: '"FaunaFlux Alerts" <prachi@mail.vinucode.in>', // Your "from" address
-      to: "prachi141btcse23@igdtuw.ac.in", // Your recipient list
+      to: ["prachi141btcse23@igdtuw.ac.in","prachisharmaa1277@gmail.com"] ,// Your recipient list
       subject: subject,
       text: textBody,
     });
@@ -49,4 +49,5 @@ async function sendAlertEmail(alert) {
 }
 
 // 3. Export the function
+
 module.exports = { sendAlertEmail };
